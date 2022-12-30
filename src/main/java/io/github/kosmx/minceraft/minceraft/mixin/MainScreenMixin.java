@@ -16,6 +16,6 @@ public class MainScreenMixin {
 
     @Inject(method = "<init>(Z)V", at = @At("RETURN"))
     private void doMinceraft(CallbackInfo ci){
-        isMinceraft = true;
+        isMinceraft = !isMinceraft;
     }
 }
